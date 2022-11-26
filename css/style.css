@@ -710,6 +710,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  position: relative;
 }
 .form-field input {
   height: 40px;
@@ -718,10 +719,15 @@ form {
 }
 .form-field input:hover,
 .form-field input:focus {
-  border: 1px solid var(--accent-color)
+  border: 1px solid var(--accent-color);
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.user-name {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .button-submit {
   font-weight: 700;
