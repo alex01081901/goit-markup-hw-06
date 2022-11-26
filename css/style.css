@@ -668,7 +668,7 @@ address {
   border-radius: 4px;
 
   width: 528px;
-  height: 581px;
+  height: auto;
 }
 .close-btn {
   position: absolute;
@@ -698,6 +698,9 @@ address {
   line-height: calc(23 / 20);
   letter-spacing: 0.03em;
   color: #212121;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 12px;
 }
 form {
   width: 448px;
@@ -710,6 +713,28 @@ form {
 }
 .form-field input {
   height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.form-field input:hover,
+.form-field input:focus {
+  border: 1px solid var(--accent-color)
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-submit {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  width: 200px;
+  height: 50px;
+  margin-top: 30px;
 }
 
 /*page2*/
