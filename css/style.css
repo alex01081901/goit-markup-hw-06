@@ -668,7 +668,8 @@ address {
   border-radius: 4px;
 
   width: 528px;
-  height: auto;
+  height: 581px;
+  padding: 40px;
 }
 .close-btn {
   position: absolute;
@@ -687,6 +688,13 @@ address {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
+.close-btn:hover,
+.close-btn:focus {
+  fill: #2196f3;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 .backgrop.is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -699,36 +707,142 @@ address {
   letter-spacing: 0.03em;
   color: #212121;
   text-align: center;
-  margin-top: 40px;
   margin-bottom: 12px;
 }
-form {
-  width: 448px;
-  margin-left: 40px;
-}
+
 .form-field {
   display: flex;
   flex-direction: column;
   gap: 10px;
   position: relative;
+  background-color: orange;
+}
+.form-fields {
+  position: relative;
 }
 .form-field input {
+  width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  padding-left: 42px;
+  outline: transparent;
+  transition: border 250ms;
+}
+.form-field textarea {
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+  transition: border 250ms;
+}
+.form-field textarea:hover,
+.form-field textarea:focus {
+  border: 1px solid var(--accent-color);
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-field input:hover,
 .form-field input:focus {
   border: 1px solid var(--accent-color);
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-label {
+  position: relative;
+}
+.user-name {
+  position: absolute;
+  top: 50%;
+  left: 13%;
+  fill: #212121;
+  transition: fill 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.user-name:hover,
+.user-name:focus {
+  color: var(--accent-color);
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.user-name {
+.check option {
+  margin: 0;
+  margin-top: 20px;
+}
+.label-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: #2196f3;
+}
+.label-text:hover,
+.label-text:hover {
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.option {
+  position: relative;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+/* Check */
+
+.check {
+  padding-left: 1.2em;
+}
+
+.check__input {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.check-box {
   position: absolute;
   top: 0;
   left: 0;
+  width: 16px;
+  height: 15px;
+  overflow: hidden;
+  border-radius: 0.05em;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  box-shadow: 0 0 0 0.1em #4a90e2;
 }
+
+/* Checked */
+
+.check__input:checked + .check__box {
+  background-color: var(--accent-color);
+  background-image: url(../icon/icon\ check.svg);
+}
+
+/* Focused */
+
+.check__input:focus + .check__box {
+  box-shadow: 0 0 0 0.1em #4a90e2, 0 0 0 0.2em #7ed321;
+}
+
+/* Disabled */
+
+.check__input:disabled + .check__box {
+  box-shadow: 0 0 0 0.1em #9b9b9b;
+}
+
+.check__input:checked:disabled + .check__box {
+  background-color: #9b9b9b;
+}
+
 .button-submit {
   font-weight: 700;
   font-size: 16px;
@@ -740,6 +854,7 @@ form {
   border-radius: 4px;
   width: 200px;
   height: 50px;
+  margin: 0 auto;
   margin-top: 30px;
 }
 
