@@ -579,7 +579,7 @@ address {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-email {
-  margin-left: 93px;
+  margin-left: auto;
 }
 .form-social {
   display: flex;
@@ -598,12 +598,19 @@ address {
   width: 358px;
   height: 50px;
   border-radius: 4px;
+  padding-left: 30px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  transition-property: background-color, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .enter:hover,
 .enter:focus {
-  border: 2px solid var(--accent-color);
+  color: var(--main-text-color);
+  border: 1px solid var(--accent-color);
+  background-color: var(--secondary-text-color);
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -624,6 +631,13 @@ address {
   padding-top: 10px;
   padding-left: 28px;
   padding-bottom: 10px;
+  padding-right: 28px;
+  gap: 10px;
+}
+.button-fly {
+  fill: #fff;
+  margin-right: 28px;
+  margin-right: 10px;
 }
 .button-email:hover .button-email:focus {
   transition-property: color, box-shadow;
@@ -728,6 +742,8 @@ address {
   padding-left: 42px;
   outline: transparent;
   transition: border 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 4px;
 }
 .form-field textarea {
   width: 100%;
@@ -738,6 +754,7 @@ address {
   border-radius: 4px;
   outline: transparent;
   transition: border 250ms;
+  margin-top: 4px;
 }
 .form-field textarea:hover,
 .form-field textarea:focus {
@@ -747,12 +764,14 @@ address {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-field input:hover,
-.form-field input:focus {
+.form-field input:focus ~ .user-name {
   border: 1px solid var(--accent-color);
+  fill: currentColor;
   transition-property: border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .form-label,
 .form-mail,
 .form-tel {
@@ -762,7 +781,7 @@ address {
   position: absolute;
   top: 50%;
   left: 13px;
-  fill: #212121;
+  fill: currentColor;
   transition: fill 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -841,7 +860,7 @@ address {
 
 .check-input:checked + .check-box {
   background-color: var(--accent-color);
-  background-image: url(../images/image\ check.svg);
+  background-image: url(../images/image\check.svg);
 }
 
 /* Focused */
