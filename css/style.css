@@ -597,6 +597,7 @@ address {
 .enter {
   width: 358px;
   height: 50px;
+  background-color: transparent;
   border-radius: 4px;
   padding-left: 30px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -611,9 +612,6 @@ address {
   color: var(--main-text-color);
   border: 1px solid var(--accent-color);
   background-color: var(--secondary-text-color);
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-email {
   position: relative;
@@ -860,7 +858,7 @@ address {
 
 .check-input:checked + .check-box {
   background-color: var(--accent-color);
-  background-image: url(../images/image\check.svg);
+  background-image: url(../img/image\ check.svg);
 }
 
 /* Focused */
