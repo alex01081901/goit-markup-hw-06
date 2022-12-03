@@ -290,11 +290,11 @@ section {
 .item:nth-child(4)::before {
   background-image: url(../icon/diagram.svg);
 }
-.about-title list {
+.about__title list {
   margin-bottom: 10px;
 }
 
-.about-title {
+.about__title {
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
